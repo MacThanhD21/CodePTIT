@@ -1,0 +1,1 @@
+{"name":"Local: PY02007","url":"e:\\IT\\CODE_PTIT\\Python\\PY02007.py","tests":[{"id":1693122030875,"input":"39 40 41 42 43 44 82\n\n25 25 235","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PY02007.py","group":"local","local":true}

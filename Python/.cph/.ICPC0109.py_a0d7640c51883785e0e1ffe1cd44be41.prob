@@ -1,0 +1,1 @@
+{"name":"Local: ICPC0109","url":"e:\\IT\\CODE_PTIT\\Python\\ICPC0109.py","tests":[{"id":1692543111400,"input":"2\n7\n1 2 3 0 -1 8 10 \n7\n9 8 20 3 4 -1 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\ICPC0109.py","group":"local","local":true}

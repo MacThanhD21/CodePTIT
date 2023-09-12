@@ -1,0 +1,1 @@
+{"name":"Local: PY02023","url":"e:\\IT\\CODE_PTIT\\Python\\PY02023.py","tests":[{"id":1692984363106,"input":"1\n8\n143 43 22 99 7 9 1111 10000000","output":"10000000 22 1111 7 43 143\n9 99"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PY02023.py","group":"local","local":true}
