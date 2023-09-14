@@ -22,6 +22,7 @@ public class J05069 {
         TranDau(String id, long soVe, ArrayList<CLB> dsCLB) {
             this.id = id;
             this.soVe = soVe;
+
             for (CLB tmp : dsCLB) {
                 if (this.id.substring(1, 3).contentEquals(tmp.idCLB)) {
                     this.clb = tmp;

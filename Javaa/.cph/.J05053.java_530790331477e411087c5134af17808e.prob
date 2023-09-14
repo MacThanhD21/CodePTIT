@@ -1,0 +1,1 @@
+{"name":"Local: J05053","url":"e:\\IT\\CODE_PTIT\\Javaa\\J05053.java","tests":[{"id":1694564160363,"input":"3\nKaki 2\nK0252\n80000\n15\nJean 1\nJ2011\n200000\n24\nJean 2\nJ0982\n150000\n12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Javaa\\J05053.java","group":"local","local":true}

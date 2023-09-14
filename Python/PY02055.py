@@ -1,22 +1,18 @@
 
 import math
 
-def sieve(n):
-    is_prime = [True] * (n + 1)
-    is_prime[0] = is_prime[1] = False
-    p = 2
-    while p * p <= n:
-        if is_prime[p]:
-            for i in range(p * p, n + 1, p):
-                is_prime[i] = False
-        p += 1
-        
 def is_prime(n):
     if n < 2: return False
     for i in range(2, int(math.sqrt(n)) + 1):
         if n % i == 0: return False
     return True
 
+def is_Palindrome(n):
+    if(len(str(n)) < 2): 
+        return False
+    n = str(n)
+    rev_n = n[::-1]
+    return rev_n == n
 
 if __name__ == '__main__':
     
@@ -30,7 +26,7 @@ if __name__ == '__main__':
 
     for i in range(N):
         for j in range(M):
-            if is_prime(matrix[i][j]):
+            if is_Palindrome(matrix[i][j]):
                 if matrix[i][j] > max_prime:
                     max_prime = matrix[i][j]
                     # Định nghĩa max_prime_positions là list nhưng chứa các tuple
@@ -46,5 +42,4 @@ if __name__ == '__main__':
         print(max_prime)
         for pos in max_prime_positions:
             # print(type(pos))
-            s = 'Vi tri [' + str(pos[0]) + ']' +  '[' + str(pos[1]) + ']'
-            print(s)
+            print(f"Vi tri [{pos[0]}][{pos[1]}]")

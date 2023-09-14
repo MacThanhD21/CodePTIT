@@ -8,6 +8,7 @@ class Time:
     
     def getTime(self):
         
+        
     
     def __str__(self):
         return f'{self.id} {self.__name} '

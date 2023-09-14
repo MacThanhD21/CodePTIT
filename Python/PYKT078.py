@@ -13,6 +13,8 @@ for z in range(t) :
     for i in a :
         if i < 0 : less_zero.append(i)
         else : greater.append(i)
-    for i in less_zero : print(i, end = " ")
-    for i in greater : print(i, end = " ")
+    for i in less_zero : 
+        print(i, end = " ")
+    for i in greater : 
+        print(i, end = " ")
     print()

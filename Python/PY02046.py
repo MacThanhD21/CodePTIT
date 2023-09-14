@@ -31,7 +31,7 @@ if __name__ == '__main__':
     for i in range(len(b)) :
        if prime(sum(b[0:i])) and prime(sum(b[i:len(b)])):
            ok = True
-           print(i)
+           print(i - 1)
            break 
     if not ok:
         print("NOT FOUND")

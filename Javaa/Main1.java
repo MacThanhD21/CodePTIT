@@ -9,16 +9,13 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.*;
-        
+
 public class Main1 {
-    
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        double number = 1266.5; // Số thập phân bạn muốn làm tròn
+        long roundedNumber = Math.round(number / 10.0) * 10;
+        System.out.println(roundedNumber); // Kết quả: 1260
 
-        String[] s = "200 Van Thanh".split("\\s+");
-
-        int a = Integer.parseInt(s[0]);
-
-        System.out.println(a);
     }
 }
