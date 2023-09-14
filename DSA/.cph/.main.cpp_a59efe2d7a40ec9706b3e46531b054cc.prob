@@ -1,0 +1,1 @@
+{"name":"Local: main","url":"e:\\PTIT\\Nam2\\KY2\\CTDL&GT\\DSA-B21DCCN677\\main.cpp","tests":[{"id":1681784669961,"input":"2\n[()]{}{[()()]()}\n[(])","output":"true\nfalse"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\PTIT\\Nam2\\KY2\\CTDL&GT\\DSA-B21DCCN677\\main.cpp","group":"local","local":true}
