@@ -1,0 +1,1 @@
+{"name":"Local: PY02078","url":"e:\\IT\\CODE_PTIT\\Python\\PY02078.py","tests":[{"id":1694704521947,"input":"3\n2\n1.0 1.0\n1.5 0.0\n3\n1.0 1.0\n1.0 1.0\n1.0 1.0\n6\n1.5 9.0\n2.0 2.0\n2.5 6.0\n3.0 5.0\n4.0 2.0\n10.0 5.5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PY02078.py","group":"local","local":true}

@@ -34,14 +34,15 @@
 #     print(f"'{substring}' not found in the string")
 
 
-with open('file_a.txt') as file_obj1:
-    with open('file_b.txt') as file_obj2:
-        lineA, lineB = file_obj1.readline(), file_obj2.readline()
-        for x, y in zip(lineA, lineB):
-            try:
-                print(int(x)**int(y))
-            except:
-                print("Lỗi định dạng")
+# with open('file_a.txt') as file_obj1:
+#     with open('file_b.txt') as file_obj2:
+#         lineA, lineB = file_obj1.readline(), file_obj2.readline()
+#         for x, y in zip(lineA, lineB):
+#             try:
+#                 print(int(x)**int(y))
+#             except:
+#                 print("Lỗi định dạng")
 
-        
+
+            
     

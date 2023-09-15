@@ -16,3 +16,4 @@ else :
         # print(int((i - s) / (n - 2)))
         print(int((i - s) / (n - 2)), end = ' ')
 
+
