@@ -1,6 +1,4 @@
 
-
-
 import math
 
 def sieve(n):

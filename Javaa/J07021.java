@@ -16,14 +16,13 @@ public class J07021 {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(new File("DATA.in"))) {
             while (true) {
-                String s = sc.nextLine().trim();
 
+                String s = sc.nextLine().trim();
                 if (s.equals("END")) {
                     break;
                 }
                 standardized(s);
             }
-
             sc.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();

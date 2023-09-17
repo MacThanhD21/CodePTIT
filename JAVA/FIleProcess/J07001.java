@@ -12,6 +12,7 @@ public class J07001 {
             Scanner sc = new Scanner (new File("DATA.in"));
             while (sc.hasNextLine()){
                 System.out.println(sc.nextLine());
+                
             }
         } catch (IOException e){
             e.printStackTrace();
