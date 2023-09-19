@@ -12,4 +12,4 @@ if __name__ == '__main__':
                     print(s[i], end = '')
                     x -= 1
         
-        print()
+        print()sd+

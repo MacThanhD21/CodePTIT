@@ -1,5 +1,5 @@
 
-with open("DATA.txt") as obj:
+with open("") as obj:
 	s = obj.read().split()
 
 new_s = sorted(list(set([x.lower() for x in s])))
