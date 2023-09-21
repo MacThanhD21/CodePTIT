@@ -42,8 +42,8 @@ def find_longest_valid_parentheses(s):
 
     for i in range(len(s)):
         if s[i] == '(':
-        	st = i
             stack.append(i)
+            st = i
         else:
             if not stack:
                 start = i
@@ -64,7 +64,6 @@ def find_longest_valid_parentheses(s):
 input_str = "((()))"
 longest_valid_parentheses = find_longest_valid_parentheses(input_str)
 print(longest_valid_parentheses)  # Output: (())
-
 
 
 # def find_max_len(s):
