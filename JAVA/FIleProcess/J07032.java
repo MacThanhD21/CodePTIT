@@ -29,21 +29,26 @@ public class J07032 {
         TreeMap<Integer, Integer> res = new TreeMap<>();
 
         for (int i : b) {
-            if (res.containsKey(i))
+            if (res.containsKey(i)) {
                 res.put(i, res.get(i) + 1);
-            else if (thuanNghich(i) && a.indexOf(i) != -1)
+            }
+            else if (thuanNghich(i) && a.indexOf(i) != -1) {
                 res.put(i, 1);
+            }
         }
-        for (int i : a)
-            if (res.containsKey(i))
+        for (int i : a) {
+            if (res.containsKey(i)) {
                 res.put(i, res.get(i) + 1);
+            }
+        }
 
         int dem = 0;
         for (Integer i : res.keySet()) {
             System.out.printf("%d %d\n", i, res.get(i));
             dem++;
-            if (dem == 10)
+            if (dem == 10) {
                 break;
+            }
         }
 
         is1.close();
