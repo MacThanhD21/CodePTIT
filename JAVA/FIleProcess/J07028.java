@@ -27,7 +27,7 @@ public class J07028 {
         
         @Override
         public String toString(){
-            return  this.tenGV+' '+String.format("%.2f", this.gioDay);
+            return this.tenGV+' '+String.format("%.2f", this.gioDay);
         }
     }
     private static class LopHocPhan{

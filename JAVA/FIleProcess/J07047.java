@@ -1,6 +1,3 @@
-package FIleProcess;
-
-
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -85,7 +82,8 @@ public class J07047 {
         }
     }
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("DATA.in"));
+        // Scanner sc = new Scanner(new File("DATA.in"));
+        Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         ArrayList<Phong> dsP = new ArrayList<>();
         while(t-->0) dsP.add(new Phong(sc));
