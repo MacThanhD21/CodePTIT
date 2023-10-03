@@ -1,10 +1,19 @@
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,14 +54,65 @@ public class Main {
 
         // System.out.println("Number of days between " + date2Str + " and " + date1Str + " is " + daysBetween + " days.");
 
-        String s = "B21DCCN677 Hello 8.5";
-        String[] tmp = s.split("\\s+");
+        // String s = "B21DCCN677 Hello 8.5";
+        // String[] tmp = s.split("\\s+");
         // for(String x : tmp) {
         //     System.out.println(x);
         // }
-        System.out.println(tmp[0]);
-        System.out.println(tmp[1]);
-        System.out.println(tmp[2]);
+        // System.out.println(tmp[0]);
+        // System.out.println(tmp[1]);
+        // System.out.println(tmp[2]);
         // System.out.println(s);
+        // int numberOfMonths = 10; // Number of months to add
+        // String purchaseDateStr = "11/01/2022"; // Purchase date in MM/dd/yyyy format
+
+        // DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        // try {
+        //     Date purchaseDate = dateFormat.parse(purchaseDateStr);
+
+        //     // Create a calendar instance and set it to the purchase date
+        //     Calendar calendar = Calendar.getInstance();
+        //     calendar.setTime(purchaseDate);
+
+        //     // Add the specified number of months
+        //     calendar.add(Calendar.MONTH, numberOfMonths);
+
+        //     // Calculate the expiration date
+        //     Date expirationDate = calendar.getTime();
+
+        //     // Format and print the expiration date
+        //     String expirationDateStr = dateFormat.format(expirationDate);
+        //     System.out.println("Expiration Date: " + expirationDateStr);
+        // } catch (ParseException e) {
+        //     e.printStackTrace();
+        // }
+        int numberOfMonths = 10; // Số tháng cần thêm
+        String purchaseDateStr = "11/01/2022"; // Ngày mua dưới dạng chuỗi MM/dd/yyyy
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        
+        try {
+            Date purchaseDate = dateFormat.parse(purchaseDateStr);
+            purchaseDateStr = dateFormat.format(purchaseDate);
+            String[] parts = purchaseDateStr.split("/");
+            int purchaseMonth = Integer.parseInt(parts[0]);
+            int purchaseDay = Integer.parseInt(parts[1]);
+            int purchaseYear = Integer.parseInt(parts[2]);
+
+            int newMonth = purchaseMonth + numberOfMonths;
+            int newYear = purchaseYear + newMonth / 12;
+            newMonth %= 12;
+
+            if (newMonth == 0) {
+                newMonth = 12;
+                newYear--;
+            }
+
+            String expirationDateStr = String.format("%02d/%02d/%04d", newMonth, purchaseDay, newYear);
+            System.out.println("Ngày hết hạn: " + expirationDateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        
     }
 }
