@@ -41,46 +41,28 @@ class SinhVien {
 class SortById implements Comparator<SinhVien> {
     @Override
     public int compare(SinhVien o1, SinhVien o2) {
-        return o1.getLop().compareTo(o2.getLop());
+        return o1.getId().compareTo(o2.getId());
     }
 }
 
 public class J07033 {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException{
+        Scanner sc = new Scanner(new File("SINHVIEN.in"));
         // Scanner sc = new Scanner(System.in);
-        // int n = Integer.parseInt(sc.nextLine());
+        int n = Integer.parseInt(sc.nextLine());
 
-        // ArrayList<SinhVien> arr = new ArrayList<>();
+        ArrayList<SinhVien> arr = new ArrayList<>();
 
-        // for(int i = 1; i <= n; i++) {
-        //     SinhVien x = new SinhVien(sc.nextLine().strip(), sc.nextLine().strip(), sc.nextLine().strip(), sc.nextLine().strip());
-        //     x.chuanHoa();
-        //     arr.add(x);
-        // }
+        for(int i = 1; i <= n; i++) {
+            SinhVien x = new SinhVien(sc.nextLine().trim(), sc.nextLine().trim(), sc.nextLine().trim(), sc.nextLine().trim());
+            x.chuanHoa();
+            arr.add(x);
+        }
 
-        // Collections.sort(arr, new SortById());
-        // for(SinhVien x : arr) {
-        //     System.out.println(x);
-        // }
-        try {
-            Scanner sc = new Scanner(new File("SINHVIEN.txt"));
-            int n = Integer.parseInt(sc.nextLine());
-
-            ArrayList<SinhVien> arr = new ArrayList<>();
-
-            for(int i = 1; i <= n; i++) {
-                SinhVien x = new SinhVien(sc.nextLine().strip(), sc.nextLine().strip(), sc.nextLine().strip(), sc.nextLine().strip());
-                x.chuanHoa();
-                arr.add(x);
-            }
-
-            Collections.sort(arr, new SortById());
-            for(SinhVien x : arr) {
-                System.out.println(x);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        Collections.sort(arr, new SortById());
+        for(SinhVien x : arr) {
+            System.out.println(x);
         }
     }
 }

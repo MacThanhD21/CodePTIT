@@ -1,77 +1,46 @@
-import java.util.*;
-        
+import java.util.Scanner;
+
 public class J03028 {
-    
+    public static String rotateString(String s) {
+        int rotation = 0;
+        for (char c : s.toCharArray()) {
+            rotation += (c - 'A');
+        }
+        rotation %= 26;
+        
+        StringBuilder rotated = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            char rotatedChar = (char) (((c - 'A' + rotation) % 26) + 'A');
+            rotated.append(rotatedChar);
+        }
+        return rotated.toString();
+    }
+
+    public static String mergeStrings(String s1, String s2) {
+        StringBuilder merged = new StringBuilder();
+        for (int i = 0; i < Math.min(s1.length(), s2.length()); i++) {
+            int rotation = s2.charAt(i) - 'A';
+            char mergedChar = (char) (((s1.charAt(i) - 'A' + rotation) % 26) + 'A');
+            merged.append(mergedChar);
+        }
+        return merged.toString();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int test = 1;
-        test = Integer.parseInt(sc.nextLine());
-
-        while(test--> 0){
-            String s = sc.nextLine();
-
-            TreeMap<Character, Integer> mp = new TreeMap<>();
+        int T = Integer.parseInt(sc.nextLine());
         
-            for(int i = 0; i < 26; i++) {
-                mp.put((char)(i + 65), i);
-            }
+        for (int t = 0; t < T; t++) {
+            String s = sc.nextLine();
+            int half = s.length() / 2;
+            String s1 = s.substring(0, half);
+            String s2 = s.substring(half);
 
-            // divide
-            String s1 = s.substring(0, s.length() / 2);
-            String s2 = s.substring(s.length() / 2);
+            String res1 = rotateString(s1);
+            String res2 = rotateString(s2);
 
-            // Rotate
-            long sum1 = 0;
-            for(Character c : s1.toCharArray()) {
-                if(mp.containsKey(c)) {
-                    // System.out.println(c + " " + mp.get(c));
-                    sum1 += mp.get(c);
-                }
-            }
-            long sum2 = 0;
-            for(Character c : s2.toCharArray()) {
-                if(mp.containsKey(c)) {
-                    // System.out.println(c + " " + mp.get(c));
-                    sum2 += mp.get(c);
-                }
-            }
-
-            String new_str1 = "";
-            String new_str2 = "";
-
-            for(Character c : s1.toCharArray()) {
-                long tmp1 = sum1;
-                while(tmp1-- > 0) {
-                    c++;
-                    if (c > 'Z') c = 'A';
-                }
-                new_str1 += c;
-            }
-            for(Character c : s2.toCharArray()) {
-                long tmp1 = sum2;
-                while(tmp1-- > 0) {
-                    c++;
-                    if (c > 'Z') c = 'A';
-                }
-                new_str2 += c;
-            }
-            // Merge
-            String new_str3 = "";
-
-            for(int i = 0; i < new_str1.length(); i++) {
-                int res = mp.get(new_str2.charAt(i));
-                Character c = new_str1.charAt(i);
-                while(res-- > 0) {
-                    c++;
-                    if (c > 'Z') c = 'A';
-                } 
-                new_str3 += c;
-            }
-            System.out.println(new_str3);
-            // System.out.println(new_str1 + " " + new_str2);
-            // System.out.println(tmp);
-            // System.out.println(s1 + " " + s2);
+            String result = mergeStrings(res1, res2);
+            System.out.println(result);
         }
-        sc.close();
     }
 }

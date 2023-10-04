@@ -34,6 +34,8 @@ public class J03025 {
             String ans = replacedString(s);
 
             System.out.println(ans);
+            ArrayList<String> ar = new ArrayList<>();
+            Collections.sort(ar);
 
         }
     }
