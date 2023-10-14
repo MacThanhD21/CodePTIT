@@ -1,1 +1,1 @@
-{"name":"Local: PY02017","url":"e:\\IT\\CODE_PTIT\\Python\\PY02017.py","tests":[{"id":1695006491401,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PY02017.py","group":"local","local":true}
+{"name":"Local: PY02017","url":"e:\\IT\\CODE_PTIT\\Python\\PY02017.py","tests":[{"id":1695006491401,"input":"2\n7\n1 2 3 2 3 1 3\n5\n1 1 3 3 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PY02017.py","group":"local","local":true}
