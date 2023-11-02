@@ -1,19 +1,20 @@
-import math
+# Định nghĩa một decorator đơn giản
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
 
+# Sử dụng decorator cho một hàm
+@my_decorator
+def say_hello():
+    print("Hello!")
 
-def prime(n):
-    if n < 2:
-        return 0
-    for i in range(2, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return 0
-    return 1
-
-
-n, m = map(int, input().split())
-
-for i in range(n):
-    a = list(map(int, input().split()))
-    for j in a:
-        print(prime(j), end=' ')
-    print()
+@my_decorator
+def say_goodbye():
+    print("goodBye!")
+    
+# Gọi hàm đã được trang bị decorator
+say_hello()
+say_goodbye()

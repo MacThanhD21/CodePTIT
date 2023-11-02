@@ -1,15 +1,18 @@
 class Time:
-    def __init__(self, id, name, hours, minutes):
-        self.__id = id
-        self.__name = name
-        self.__hours = hours
-        self.__minutes = minutes
-
-    def get_total_minutes(self):
-        return self.__hours * 60 + self.__minutes
-
+    H, M = "", ""
+    def __init__(self, id, name, in_Hour, in_Minute, out_Hour, out_Minute):
+        self.id = id
+        self.name = name
+        self.in_Hour = in_Hour
+        self.in_Minute = in_Minute
+        self.out_Hour = out_Hour
+        self.out_Minute = out_Minute
+        
     def __str__(self):
-        return f"{self.__id} {self.__name} {self.__hours} gio {self.__minutes} phut"
+        Time = (self.out_Hour - self.in_Hour) + (self.out_Minute - self.in_Minute) / 60
+        H = Time[:1]
+        M = str((Time) - H) * 60
+        return f"{self.id} {self.name} {self.H} {self.M}"
 
 
 if __name__ == '__main__':
@@ -17,16 +20,18 @@ if __name__ == '__main__':
     players = []
 
     for _ in range(n):
-        data = input().split()
-        id = data[0]
-        name = " ".join(data[1:-2])
-        hours = int(data[-2])
-        minutes = int(data[-1])
-        player = Time(id, name, hours, minutes)
-        players.append(player)
-
-    players.sort(key=lambda x: x.get_total_minutes(), reverse=True)
-
+        id = input()
+        name = input()
+        in_Time = input()
+        in_Hour = int(in_Time[:2])
+        in_Minute = int(in_Time[3:])
+        out_Time = input()
+        out_Hour = int(out_Time[:2])
+        out_Minute = int(out_Time[3:])
+        
+        x = Time(id, name, in_Hour, in_Minute, out_Hour, out_Minute)
+        players.append(x)
+        
     for player in players:
         print(player)
 

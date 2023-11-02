@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Javaa">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/J05060-RAR.zip!/" />
+      <root url="jar://$PROJECT_DIR$/J05003.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

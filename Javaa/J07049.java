@@ -37,7 +37,7 @@ class Product {
 
 class Customer implements Comparable<Customer> {
     private String id_Cus, name_Cus, add_Cus, id_Pro; private long quantity;
-    private LocalDate ngayMua,ExpirationDate;
+    private LocalDate ngayMua, ExpirationDate;
 
     public long price = 0, warrantly_period_Pro = 0;
 
@@ -48,7 +48,6 @@ class Customer implements Comparable<Customer> {
         this.id_Pro = id_Pro;
         this.quantity = quantity;
         this.ngayMua = DateTimeFormatter.ofPattern("dd/MM/yyyy").parse(pur_Date, LocalDate::from) ;
-
 
         for(Product i : products) {
             if(i.getId_Pro().equals(id_Pro)) {

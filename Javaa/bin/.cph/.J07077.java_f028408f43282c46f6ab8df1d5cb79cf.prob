@@ -1,0 +1,1 @@
+{"name":"Local: J07077","url":"e:\\IT\\CODE_PTIT\\Javaa\\J07077.java","tests":[{"id":1696250319357,"input":"4\n6*3+2-(6-4/2)\n100+99*22\n6*((4*3)+5)\n1-2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Javaa\\J07077.java","group":"local","local":true}
