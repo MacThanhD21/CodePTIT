@@ -1,1 +1,0 @@
-{"name":"Local: TN02012","url":"e:\\IT\\CODE_PTIT\\Javaa\\TN02012.java","tests":[{"id":1696413808496,"input":"2\nHC Hanh chinh\nKH Ke hoach Dau tu\n2\nC06HC\nTran Binh Minh\n65\n25\nD03KH\nLe Hoa Binh\n59\n24","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Javaa\\TN02012.java","group":"local","local":true}

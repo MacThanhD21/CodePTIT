@@ -1,56 +1,36 @@
-class Student:
-    def __init__(self, code, name, team_code):
-        self.code = "C" + format(code, "%03d")
-        self.name = name
-        self.team_code = team_code
-
-
 class Team:
-    def __init__(self, team_code, team_name, school_name):
-        self.team_code = "Team" + format(team_code, "%02d")
-        self.team_name = team_name
-        self.school_name = school_name
-        self.students = []
+    def __init__(self, id, name_Team, name_School):
+        self.id = "Team" + format(id, "02d")
+        self.name_Team = name_Team
+        self.name_School = name_School
 
-    def add_student(self, student):
-        self.students.append(student)
 
-def sort_by_name(student):
-    return student.name
-
-def main():
-    num_teams = int(input())
-    teams = []
-
-    for i in range(num_teams):
-        team_name = input()
-        school_name = input()
-        team = Team(i + 1, team_name, school_name)
-        teams.append(team)
-
-    num_students = int(input())
-
-    for i in range(num_students):
-        student_name = input()
-        student_team_code = input()
-        student = Student(i + 1, student_name, student_team_code)
-
-        for team in teams:
-            if team.team_code == student_team_code:
-                team.add_student(student)
+class Student:
+    Team = None
+    def __init__(self, id, name_Stu, team_id, dsTeam):
+        self.id = "C" + format(id, "03d")
+        self.name_Stu = name_Stu
+        self.team_id = team_id
+        for x in dsTeam : 
+            if x.id == team_id:
+                self.Team = x
                 break
+    def __str__(self):
+        return f'{self.id} {self.name_Stu} {self.Team.name_Team} {self.Team.name_School}'
+    
+    
+n = int(input())
 
-    all_students = []
-    for team in teams:
-        all_students.extend(team.students)
+dsTeam = []
+for i in range(n):
+    dsTeam.append(Team(i + 1, input(), input()))
 
-    all_students.sort(key=sort_by_name, reverse=True)
+m = int(input())
+dsStudent = []
+for i in range(m):
+    dsStudent.append(Student(i + 1, input(), input(), dsTeam))
 
-    for student in all_students:
-        for team in teams:
-            if team.team_code == student.team_code:
-                print(f'{student.code} {student.name} {team.team_name} {team.school_name}')
+dsStudent.sort(key = lambda x : x.name_Stu)
 
-
-if __name__ == '__main__':
-    main()
+for x in dsStudent:
+    print(x)

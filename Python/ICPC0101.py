@@ -15,10 +15,8 @@ def solve():
     n = int(input())
     A = list(map(int, input().split()))
 
-    # Gọi hàm tính số phần tử còn lại
     result = shrink_array(n, A)
 
-    # In kết quả
     print(result)
     
 if __name__ == '__main__':

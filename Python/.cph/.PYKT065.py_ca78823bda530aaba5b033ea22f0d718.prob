@@ -1,0 +1,1 @@
+{"name":"Local: PYKT065","url":"e:\\IT\\CODE_PTIT\\Python\\PYKT065.py","tests":[{"id":1699643106994,"input":"1 10\n10\n2001 2309\n50\n34 2003\n50\n-1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PYKT065.py","group":"local","local":true}
