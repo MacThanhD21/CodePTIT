@@ -1,5 +1,20 @@
 import math
 
+ass
+Point:
+
+
+def __init__(self, x, y):
+    self.x = x
+    self.y = y
+
+
+def distance(self, k):
+    x0 = self.x - k.x
+    y0 = self.y - k.y
+    return math.sqrt(x0 * x0 + y0 * y0)
+
+
 class Point :
     def __init__(self, x, y):
         self.x = x
