@@ -1,1 +1,0 @@
-{"name":"Local: PYKT093","url":"e:\\IT\\CODE_PTIT\\Python\\PYKT093.py","tests":[{"id":1699634638979,"input":"4\n ha Thi kieu     anh\n7\n6\n7\nPham    THI  HAO\n5 \n6 \n7\nMac Van THANH\n5 \n6 \n7\nDao Xuan Anh\n5 \n9\n2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PYKT093.py","group":"local","local":true}
