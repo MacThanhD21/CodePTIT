@@ -1,0 +1,1 @@
+{"name":"Local: J05071","url":"e:\\IT\\CODE_PTIT\\JAVA\\OOP\\J05071.java","tests":[{"id":1700882888022,"input":"2\n53\nDa Nang\n3000\n64\nVung Tau\n1000\n3\n064-824531 11:20 11:22\n8293567 09:07 09:15\n053-823532 12:00 12:05","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\JAVA\\OOP\\J05071.java","group":"local","local":true}
