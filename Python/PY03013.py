@@ -1,24 +1,20 @@
-def count_digits(n, digit):
-    count = 0
-    while n > 0:
-        last_digit = n % 10
-        if last_digit == digit:
-            count += 1
-        n //= 10
-    return count
+def f(x, n):
+    ret = 0
+    for i in range(0, 10):
+        m = 10**i 
+        if m > n: break
+        a = n // m
+        b = n % m
+        z = a % 10
+        if z > x: ret += ((a // 10) + 1) * m
+        elif z == x: ret += (a // 10) * m + (b + 1)
+        else: ret += (a // 10) * m
+        if x == 0: ret -= m
+    return ret
+def digitsCount(d, low, high):
+    return f(d, high) - f(d, low - 1)
 
-def count_digits_dp(A, B, digit):
-    dp = [0] * (B + 1)
-    for i in range(1, B + 1):
-        dp[i] = dp[i // 10] + count_digits(i, digit)
-    
-    if A == 0:
-        return dp[B]
-    else:
-        return dp[B] - dp[A - 1]
-
-T = int(input())
-for _ in range(T):
-    A, B = map(int, input().split())
-    result = [count_digits_dp(A, B, digit) for digit in range(10)]
-    print(*result)
+for t in range(int(input())):
+    a, b = map(int, input().split())
+    for i in range(0, 10): print(digitsCount(i, a, b), end=' ')
+    print()
