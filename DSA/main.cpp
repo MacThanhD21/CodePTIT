@@ -29,3 +29,22 @@ int main() {
 
     return 0;
 }
+
+bool chopstick[5] = {false, false, false, false, false};
+void Philosopher(int i) {
+    for(;;) {
+        while(test_and_set(chopstick[i]));
+        while(test_and_set(chopstick[(i+1)%5]));
+        <ăn cơm>
+        chopstick[i] = false;
+        chopstick[(i+1)%5] = false;
+        <suy nghĩ>
+    }
+}
+int main() {
+    Start process(Philosopher(1));
+    Start process(Philosopher(2));
+    Start process(Philosopher(3));
+    Start process(Philosopher(4));
+    Start process(Philosopher(5));
+}
