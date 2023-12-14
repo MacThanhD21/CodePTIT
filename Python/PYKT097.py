@@ -1,5 +1,4 @@
 
-
 while True:
     try:
         s = input().strip().capitalize().split()
