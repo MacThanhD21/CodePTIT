@@ -1,18 +1,17 @@
+from datetime import datetime
 class Time:
     H, M = "", ""
-    def __init__(self, id, name, in_Hour, in_Minute, out_Hour, out_Minute):
+    def __init__(self, id, name, in_Time, out_Time):
         self.id = id
         self.name = name
-        self.in_Hour = in_Hour
-        self.in_Minute = in_Minute
-        self.out_Hour = out_Hour
-        self.out_Minute = out_Minute
+        self.in_Time = in_Time
+        self.out_Time = out_Time
+        self.H = ((datetime.strptime(self.out_Time, "%H:%M") - (datetime.strptime(self.in_Time, "%H:%M"))).seconds // 3600)
+        self.M = ((datetime.strptime(self.out_Time, "%H:%M") - (datetime.strptime(self.in_Time, "%H:%M"))).seconds // 60) % 60
+        self.gg = float(self.H) + float(self.M / 60)
         
     def __str__(self):
-        Time = (self.out_Hour - self.in_Hour) + (self.out_Minute - self.in_Minute) / 60
-        H = Time[:1]
-        M = str((Time) - H) * 60
-        return f"{self.id} {self.name} {self.H} {self.M}"
+        return f"{self.id} {self.name} {self.H} {'gio'} {self.M} {'phut'}"
 
 
 if __name__ == '__main__':
@@ -23,15 +22,10 @@ if __name__ == '__main__':
         id = input()
         name = input()
         in_Time = input()
-        in_Hour = int(in_Time[:2])
-        in_Minute = int(in_Time[3:])
         out_Time = input()
-        out_Hour = int(out_Time[:2])
-        out_Minute = int(out_Time[3:])
-        
-        x = Time(id, name, in_Hour, in_Minute, out_Hour, out_Minute)
+        x = Time(id, name, in_Time, out_Time)
         players.append(x)
-        
+    players.sort(key=lambda x : -x.gg)
     for player in players:
         print(player)
 

@@ -1,0 +1,1 @@
+{"name":"Local: PY04019","url":"e:\\IT\\CODE_PTIT\\Python\\PY04019.py","tests":[{"id":1702701658746,"input":"3\nNguyen Thai Binh\n45\n7.7\nLe Cong Hoa\n4\n4.5\nPhan Van Duc\n56\n57","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\IT\\CODE_PTIT\\Python\\PY04019.py","group":"local","local":true}
