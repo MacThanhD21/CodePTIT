@@ -1,15 +1,15 @@
-
-with open("DATA.txt") as obj:
-    s = obj.read().split()
+f = open('VANBAN.in')
+data = f.read().split()
 
 dic = {}
 res = ""
 max_Len = 0
 
-for x in s:
+for x in data:
     if x == x[::-1]:
         if len(x) > max_Len:
             max_Len = len(x)
+            res = x
             dic.clear()
             dic[x] = 1
         elif len(x) == max_Len:
@@ -17,6 +17,5 @@ for x in s:
                 dic[x] = 1
             else:
                 dic[x] += 1
-
-for s, fre in dic.items():
-    print(s, fre)    
+for x in dic:
+    print(x, dic[x])
