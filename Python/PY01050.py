@@ -1,17 +1,19 @@
+from datetime import *
+from collections import *
 import itertools
-def is_valid(s):
-    return s.count('A') <= s.count('B') and s.count('B') <= s.count('C')
-def is_valid2(s):
-    return all(char in s for char in ['A', 'B', 'C'])
+from math import *
 
 N = int(input())
+chr = ['A', 'B', 'C']
 
-characters = ['A', 'B', 'C']
+def check_1(s):
+    return (s.count('A') <= s.count('B') and s.count('B') <= s.count('C'))
+def check_2(s):
+    return all(x in s for x in chr)
 
-for length in range(3, N + 1):
-    all_strings = itertools.product(characters, repeat=length) # return product obj
-    # each string is tuple of characters
-    for string in all_strings:
-        s = ''.join(string)
-        if is_valid(s) and is_valid2(s):
+for i in range(3, N + 1):
+    res = itertools.product(chr, repeat=i)
+    for string in res:
+        s = "".join(string)
+        if check_1(s) and check_2(s):
             print(s)
