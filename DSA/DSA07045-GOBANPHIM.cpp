@@ -81,7 +81,7 @@ void solve(string s)
             }
         }
         else
-            X.push(s[i]);
+            X.push(x);
     }
     while (X.size())
     {

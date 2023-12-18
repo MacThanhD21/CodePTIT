@@ -9,7 +9,6 @@ for x in data:
     if x == x[::-1]:
         if len(x) > max_Len:
             max_Len = len(x)
-            res = x
             dic.clear()
             dic[x] = 1
         elif len(x) == max_Len:
