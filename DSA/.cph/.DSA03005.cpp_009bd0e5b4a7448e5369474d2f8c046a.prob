@@ -1,1 +1,0 @@
-{"name":"Local: DSA03005","url":"e:\\HOCVIENPTIT\\Nam2\\KY2\\CTDL&GT\\DsaCodePtit\\DSA03005.cpp","tests":[{"id":1675944842684,"input":"2\n5 2\n8 4 5 2 10\n8 3\n1 1 1 1 1 1 1 1","output":"17\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\HOCVIENPTIT\\Nam2\\KY2\\CTDL&GT\\DsaCodePtit\\DSA03005.cpp","group":"local","local":true}
